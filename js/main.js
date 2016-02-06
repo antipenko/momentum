@@ -36,14 +36,15 @@
 
 			if (prodColor.val() === 'grey') {
 				phone.attr({
-					'src':'../img/whitehead.png',
+					'src':'img/whitehead.png',
+					// 'src': 'http://s1.iconbird.com/ico/0612/iloviconsbysvengraph/w512h5121339361119headphones.png',
 					'alt':'white'
 				});
 				prodColor.val('black');
 
 			} else{
 				phone.attr({
-					'src':'../img/headphones1.png',
+					'src':'img/headphones1.png',
 					'alt':'white'
 				});
 				prodColor.val('grey');
