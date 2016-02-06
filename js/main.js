@@ -35,22 +35,26 @@
 		prodColor.on('change', function(){
 
 			if (prodColor.val() === 'grey') {
+				phone.hide('slow');
 				phone.attr({
 					'src':'img/whitehead.png',
 					// 'src': 'http://s1.iconbird.com/ico/0612/iloviconsbysvengraph/w512h5121339361119headphones.png',
 					'alt':'white'
 				});
+				phone.show('slow');
 				prodColor.val('black');
 
 			} else{
+				phone.hide('slow');
 				phone.attr({
 					'src':'img/headphones1.png',
 					'alt':'white'
 				});
+				phone.show('slow');
 				prodColor.val('grey');
 			}
 
-			})
+		})
 
 
 
@@ -75,7 +79,7 @@
 		// }
 		// });
 
-		// 	price =$('.ba-product__price');;
+		 	price =$('.ba-product__price');
 		// var but = $('.ba-button'),
 		// 	phone = $('img'),
 		// 	price =$('.ba-product__price');
@@ -89,6 +93,13 @@
 
 		// });
 
+var but=$('#add');
+
+but.on('click', function(event){
+	event.preventDefault();
+	console.log('add');
+	phone.hide('slow');
+});
 
 });
 })(jQuery);
