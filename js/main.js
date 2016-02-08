@@ -28,32 +28,56 @@
 
 
 		var prodColor=$('[name="product_color"]'),
-		phone = $('img#myphoto');
+		headphone = $('img#myphoto');
 
-		console.log(prodColor.val());
+		// console.log(prodColor.val());
 
-		prodColor.on('change', function(){
+		// prodColor.on('change', function(){
 
-			if (prodColor.val() === 'grey') {
-				phone.hide('slow');
-				phone.attr({
-					'src':'../img/whitehead.png',
-					'alt':'white'
-				});
-				phone.show('slow');
-				prodColor.val('black');
+		// 	if (prodColor.val() === 'grey') {
+		// 		headphone.hide('slow');
+		// 		headphone.attr({
+		// 			'src':'../img/whitehead.png',
+		// 			'alt':'white'
+		// 		});
+		// 		headphone.show('slow');
+		// 		prodColor.val('black');
 
-			} else{
-				phone.hide('slow');
-				phone.attr({
+		// 	} else{
+		// 		headphone.hide('slow');
+		// 		headphone.attr({
+		// 			'src':'../img/headphones1.png',
+		// 			'alt':'white'
+		// 		});
+		// 		headphone.show('slow');
+		// 		prodColor.val('grey');
+		// 	}
+
+		// });
+
+
+		prodColor.on('change', function() {
+			console.log(prodColor.val());
+			headphone.this.hide('slow');
+			switch (prodColor.val()) {
+				case 'black':
+					headphone.attr({
 					'src':'../img/headphones1.png',
 					'alt':'white'
 				});
-				phone.show('slow');
-				prodColor.val('grey');
+					prodColor.val('grey');
+					headphone.show('slow');
+					break;
+				case 'grey':
+					headphone.attr({
+					'src':'../img/whitehead.png',
+					'alt':'white'
+				});
+					prodColor.val('black');
+					headphone.show('slow');
+					break;
 			}
-
-		})
+		});
 
 
 
